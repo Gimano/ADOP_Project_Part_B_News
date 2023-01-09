@@ -3,6 +3,8 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ADOP_Project_Part_B_News.Views.ArticleView">
     <ContentPage.Content>
-        <WebView Source="{Binding .}" />
+        <WebView Source="{Binding .}" 
+                 WidthRequest="{Binding Source={x:Reference thisPage}, Path=Width}"
+                 HeightRequest="{Binding Source={x:Reference thisPage}, Path=Height}"/>
     </ContentPage.Content>
 </ContentPage>

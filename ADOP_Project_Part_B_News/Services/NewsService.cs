@@ -1,4 +1,4 @@
-﻿#define UseNewsApiSample  // Remove or undefine to use your own code to read live data
+﻿//#define UseNewsApiSample  // Remove or undefine to use your own code to read live data
 
 using System;
 using System.Linq;
