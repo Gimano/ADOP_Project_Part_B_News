@@ -7,6 +7,7 @@ public partial class NewsPage : ContentPage
 {
     NewsService service;
     NewsCategory category;
+    News item;
 
 	public NewsPage(NewsCategory category)
 	{
@@ -14,6 +15,7 @@ public partial class NewsPage : ContentPage
 
         this.category = category;
         service= new NewsService();
+        this.BindingContext = item;
     }
     protected override async void OnAppearing()
     {

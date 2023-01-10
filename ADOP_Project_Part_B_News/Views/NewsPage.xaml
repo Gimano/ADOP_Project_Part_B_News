@@ -11,10 +11,10 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Padding="5">
-                                <Image Source="{Binding UrlToImage}"/>
+                                <Image Source="{Binding Path=UrlToImage}"/>
                                 <StackLayout Orientation="Vertical" >
-                                    <Label Text="{Binding DateTime, StringFormat='{0:D}'}"/>
-                                    <Label Text="{Binding Title}"/>
+                                    <Label Text="{Binding Path=DateTime, StringFormat='{0:D}'}"/>
+                                    <Label Text="{Binding Path=Title}"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
