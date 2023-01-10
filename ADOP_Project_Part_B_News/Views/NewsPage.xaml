@@ -6,7 +6,7 @@
     <VerticalStackLayout>
         <StackLayout>
             <Button Text="Refresh" Clicked="Button_Clicked" />
-            <ListView x:Name="GroupedNews" IsGroupingEnabled="true" HasUnevenRows="true">
+            <ListView x:Name="GroupedNews" IsGroupingEnabled="true">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -14,7 +14,7 @@
                                 <Image Source="{Binding UrlToImage}"/>
                                 <StackLayout Orientation="Vertical" >
                                     <Label Text="{Binding DateTime, StringFormat='{0:D}'}"/>
-                                    <Label Text="{Binding Description}"/>
+                                    <Label Text="{Binding Title}"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

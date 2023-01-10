@@ -15,12 +15,12 @@ public partial class NewsPage : ContentPage
         this.category = category;
         service= new NewsService();
     }
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
-        base.OnAppearing();
+        //base.OnAppearing();
         Title = $"Headlines for {category}";
 
-        MainThread.BeginInvokeOnMainThread(async () => { await LoadNewsCategory(); });
+        await LoadNewsCategory();
     }
     private async void Button_Clicked(object sender, EventArgs e)
     {
