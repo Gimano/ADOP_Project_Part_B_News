@@ -18,6 +18,7 @@ namespace ADOP_Project_Part_B_News.Services
         HttpClient httpClient = new HttpClient();
         //Your API key
         readonly string apiKey = "6b2990a1f70040498e70f10e83807d53";
+        //readonly string apiKey = "";
 
         FileNews fileNews = new FileNews();
 

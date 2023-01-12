@@ -3,18 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ADOP_Project_Part_B_News.Views.NewsPage"
              Title="NewsPage">
-    <VerticalStackLayout>
+    <ContentPage.Content>
         <StackLayout>
             <Button Text="Refresh" Clicked="Button_Clicked" />
-            <ListView x:Name="GroupedNews" IsGroupingEnabled="true">
+            <Label FontSize="Medium" 
+                   Text="Todays Headlines" 
+                   Padding="20" 
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center"/>
+            <ListView x:Name="GroupedNews" HasUnevenRows="true" ItemTapped="ListViewItemTapped" HorizontalOptions="StartAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Padding="5">
-                                <Image Source="{Binding Path=UrlToImage}"/>
-                                <StackLayout Orientation="Vertical" >
-                                    <Label Text="{Binding Path=DateTime, StringFormat='{0:D}'}"/>
-                                    <Label Text="{Binding Path=Title}"/>
+                                <Image Source="{Binding UrlToImage}" HeightRequest="120" WidthRequest="120"/>
+                                <StackLayout Orientation="Vertical" Padding="10">
+                                    <Label Text="{Binding DateTime}"/>
+                                    <Label Text="{Binding Title}" FontSize="20" LineBreakMode="WordWrap"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
@@ -22,5 +27,5 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-    </VerticalStackLayout>
+    </ContentPage.Content>
 </ContentPage>

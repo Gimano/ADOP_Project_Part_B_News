@@ -11,7 +11,7 @@
         <Label Text="News in MAUI" FontSize="Title" Padding="30,10,30,10"/>
         <Label Text="This part of the project is about making a simple MAUI Application of the console news service made in project part A2." 
                FontSize="16" Padding="30,0,30,0"/>
-        <Label Text="Select a city and give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label Text="Select a news category and give it a try!" FontSize="16" Padding="30,0,30,0"/>
         <Label Text="Have fun!" FontSize="16" Padding="30,0,30,0"/>
         <Label FontSize="16" Padding="30,24,30,0">
             <Label.FormattedText>
@@ -22,6 +22,15 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <Frame Padding="30">
+        <BoxView Color="Aqua" 
+                 WidthRequest="500" 
+                 MinimumWidthRequest="10" 
+                 MaximumWidthRequest="10000" 
+                 HorizontalOptions="StartAndExpand"  
+                 HeightRequest="10"
+                 />
+        </Frame>
     </StackLayout>
 
 </ContentPage>
