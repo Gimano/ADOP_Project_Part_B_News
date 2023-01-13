@@ -22,15 +22,6 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
-        <Frame Padding="30">
-        <BoxView Color="Aqua" 
-                 WidthRequest="500" 
-                 MinimumWidthRequest="10" 
-                 MaximumWidthRequest="10000" 
-                 HorizontalOptions="StartAndExpand"  
-                 HeightRequest="10"
-                 />
-        </Frame>
     </StackLayout>
 
 </ContentPage>

@@ -11,15 +11,15 @@
                    Padding="20" 
                    HorizontalOptions="Center" 
                    HorizontalTextAlignment="Center"/>
-            <ListView x:Name="GroupedNews" HasUnevenRows="true" ItemTapped="ListViewItemTapped" HorizontalOptions="StartAndExpand">
+            <ListView x:Name="GroupedNews" ItemTapped="ListViewItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="5">
+                            <StackLayout Orientation="Horizontal">
                                 <Image Source="{Binding UrlToImage}" HeightRequest="120" WidthRequest="120"/>
-                                <StackLayout Orientation="Vertical" Padding="10">
+                                <StackLayout Orientation="Vertical" Padding="10" VerticalOptions="Center">
                                     <Label Text="{Binding DateTime}"/>
-                                    <Label Text="{Binding Title}" FontSize="20" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding Title}" FontSize="20"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
